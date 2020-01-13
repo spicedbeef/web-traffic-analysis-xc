@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+    		<name>fs.defaultFS</name>
+    		<value>hdfs://19master:9999</value>
+		<description>表示HDFS的基本路径</description>
+	</property>
+	<property>
+                 <name>fs.trash.interval</name>
+                <value>3</value>
+		<description>表示删除后的文件或目录在Trash保存3分钟</description>
+        </property>
+
+	<property>
+                <name>hadoop.proxyuser.hadoop-xc.hosts</name>
+                <value>*</value>
+        </property>
+        <property>
+                <name>hadoop.proxyuser.hadoop-xc.groups</name>
+                <value>*</value>
+        </property>
+</configuration>
+<!--<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+        <xi:include href="mountTable.xml"/>
+        <property>
+                 <name>fs.default.name</name>
+                <value>viewfs://my-cluster</value>
+		<description>用于在多个namenode时提供统一的访问路径</description>
+        </property>
+</configuration>-->
+
