@@ -1,0 +1,35 @@
+<configuration>
+<property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:mysql://19master:3306/hive?createDatabaseIfNotExist=true</value>
+</property>
+<property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>com.mysql.jdbc.Driver</value>
+</property>
+<property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>root</value>
+</property>
+<property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>190303</value>
+</property>
+<property>
+  <name>hive.metastore.warehouse.dir</name>
+  <value>hdfs://19master:9999/user/hive/warehouse</value>
+</property>
+<property>
+  <name>hbase.zookeeper.quorum</name>
+  <value>19master,19slave1,19slave2</value>
+</property>
+
+<!-- thrift://<host_name>:<port> 默认端口是9083 -->
+<property>
+<name>hive.metastore.uris</name>
+<value>thrift://19master:9083</value>
+<description>Thrift uri for the remote metastore. Used by metastore client to connect to
+remote metastore.</description>
+</property>
+
+</configuration>
